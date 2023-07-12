@@ -1,0 +1,6 @@
+org/openlogix/Server.class
+org/openlogix/HealthHandler.class
+org/openlogix/Book.class
+org/openlogix/BookInfo.class
+org/openlogix/App.class
+org/openlogix/BookHandler.class

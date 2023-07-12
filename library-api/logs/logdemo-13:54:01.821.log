@@ -1,0 +1,13 @@
+14:21:50 [org.openlogix.App.main()] INFO  org.openlogix.App - connection success
+14:21:50 [org.openlogix.App.main()] FATAL org.openlogix.App - connection not passed
+14:21:50 [org.openlogix.App.main()] ERROR org.openlogix.App - connection failed
+14:21:50 [org.openlogix.App.main()] WARN  org.openlogix.App - warn connection
+14:29:56 [org.openlogix.App.main()] INFO  org.openlogix.App - connection success
+14:29:56 [org.openlogix.App.main()] FATAL org.openlogix.App - connection not passed
+14:29:56 [org.openlogix.App.main()] ERROR org.openlogix.App - connection failed
+14:29:56 [org.openlogix.App.main()] WARN  org.openlogix.App - warn connection
+17:13:08 [org.openlogix.App.main()] INFO  org.openlogix.App - connection success
+17:13:08 [org.openlogix.App.main()] FATAL org.openlogix.App - connection not passed
+17:13:08 [org.openlogix.App.main()] ERROR org.openlogix.App - connection failed
+17:13:08 [org.openlogix.App.main()] WARN  org.openlogix.App - warn connection
+13:54:01 [org.openlogix.App.main()] INFO  org.openlogix.App - connection success

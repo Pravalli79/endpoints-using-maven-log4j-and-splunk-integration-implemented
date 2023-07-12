@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration >
+    <Properties>
+        <Property name="LOG_DIR">./logs</Property>
+    </Properties>
+        <Appenders>
+            <Console name="Console" target="SYSTEM_OUT">
+                <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+            </Console>
+            <RollingFile
+                name="rollingFile"
+                fileName="${LOG_DIR}/logdemo.log"
+                filePattern="${LOG_DIR}/logdemo-%d{HH:mm:ss.SSS}.log">
+                <PatternLayout>
+                    <pattern>%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
+                </PatternLayout>
+                <SizeBasedTriggeringPolicy size="1 KB" />
+            </RollingFile>
+            <SplunkHttp
+                name="splunkhttp"
+                url="http://localhost:8088"
+                token="3a4d0ad6-e72c-4ddd-8787-57bb7a593d5a"
+                index="library-api"
+                host="localhost"
+                type="raw"
+                sourcetype="json"
+                disableCertificateValidation="true" >
+                <PatternLayout pattern="%m"/>
+            </SplunkHttp>
+        </Appenders>
+        <Loggers>
+            <Logger name="org.openLogix" level="INFO">
+                <AppenderRef ref="Console"/>
+                <AppenderRef ref="rollingFile"/>
+            </Logger>
+            <Root level="INFO">
+                <AppenderRef ref="Console"/>
+                <AppenderRef ref="rollingFile"/>
+                <AppenderRef ref="splunkhttp" />
+            </Root>
+        </Loggers>
+</Configuration>
